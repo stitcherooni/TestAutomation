@@ -45,13 +45,58 @@ let locationBtnNewZealand = '[data-name="England & Wales"]';
 let locationBtnAustralia = '[data-name="England & Wales"]';
 let locationBtnCanada = '[data-name="England & Wales"]';
 let locationBtnIreland = '[data-name="England & Wales"]';
-let locationBtnContinue =
+let btnContinueLocation =
   "#root > main > div > div > div.sc-cPiKLX.fqYvIo > div:nth-child(2) > button";
 
-let starterPackage =
-  '//*[@id="root"]/main/div/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/button';
-let btnContinueRegistration =
-  "#root > main > div > div > div.sc-cPiKLX.fqYvIo > div:nth-child(2) > button";
+let inputPTAName = "ptaName"
+let inputSchoolName = "schoolName"
+let inputAddress1 = "address1"
+let inputAddress2 = "address2"
+let inputTown = "town"
+let inputCounty = "county"
+let inputPostCode = "postCode"
+let btnContinue = ".sc-eqUAAy"
+
+let color1 = '.itoEEl > .PrivateSwitchBase-input'//Peachy Pinky
+let color2 = '.dEAwDV > .PrivateSwitchBase-input'
+let color3 = '.clOXBF > .PrivateSwitchBase-input'
+let color4 = '.eDOvnS > .PrivateSwitchBase-input'
+let color5 = '.hTeWZK > .PrivateSwitchBase-input'
+let color6 = '.gLxpPB > .PrivateSwitchBase-input'
+let color7 = '.ugRht > .PrivateSwitchBase-input'
+let color8 = '.lkTBnJ > .PrivateSwitchBase-input'
+let color9 = '.hrGTBD > .PrivateSwitchBase-input'
+let color10 = '.cWSplh > .PrivateSwitchBase-input'
+let color11 = '.lpoAjF > .PrivateSwitchBase-input'
+let color12 = '.cvZEVi > .PrivateSwitchBase-input'
+
+let inputURL = 'ptaUrl'
+let notificationURL = '//*[@id="ptaUrl-helper-text"]/span'
+
+let inputFirstName = 'firstName'
+let inputSecondName = 'secondName'
+let dropdnRole = 'ptaRole'
+let roleChair = '#menu-role > div.MuiPaper-root.MuiMenu-paper.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-19k1qda > ul > li:nth-child(1)'
+let inputEmail = 'ptaEmail'
+let inputPassword = 'ptaPassword'
+let inputRepeatPassword = 'ptaRepeatPassword'
+
+let starterPackage ='//*[@id="root"]/main/div/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/button';
+let proPackage = '#root > main > div > div > div.sc-cPiKLX.fqYvIo > div:nth-child(2) > div.sc-kdBSHD.iOGLpV > div:nth-child(1) > div > div.sc-hCPjZK.czJzWZ > button'
+
+let messageSuccess = '#root > main > div > div > div > p.text'
+
+
+
+
+
+
+
+
+
+//let starterPackage =
+//  '#root > main > div > div > div.sc-cPiKLX.fqYvIo > div:nth-child(2) > div.sc-jGKxIK.jnOGPr > div.sc-fTFjTM.cXjYJd.chosen';
+
 
 module.exports = {
   clearLocalStorage,
@@ -62,7 +107,39 @@ module.exports = {
 
   firstPageContinueButton,
   locationBtnEnglandWales,
-  locationBtnContinue,
+  btnContinue,
   starterPackage,
-  btnContinueRegistration,
+  inputPTAName,
+  inputSchoolName,
+  inputAddress1,
+  inputAddress2,
+  inputTown,
+  inputCounty,
+  inputPostCode,
+  color1,
+  color2,
+  color3,
+  color4,
+  color5,
+  color6,
+  color7,
+  color8,
+  color9,
+  color10,
+  color11,
+  color12,
+  inputURL,
+  notificationURL,
+  inputFirstName,
+  inputSecondName,
+  dropdnRole,
+  roleChair,
+  inputEmail,
+  inputPassword,
+  inputRepeatPassword,
+  messageSuccess,
+  proPackage
+
+
+
 };
