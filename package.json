@@ -4,7 +4,8 @@
   "description": "PTA-events",
   "main": "index.js",
   "scripts": {
-    "test": "npx mocha tests/**/*.spec.js --timeout 60000"
+    "test": "npx mocha tests/**/*.spec.js -r dotenv/config --timeout 60000",
+    "smoke": "mocha tests/**/smoke*.spec.js -r dotenv/config --timeout 60000"
   },
   "author": "",
   "license": "ISC",
