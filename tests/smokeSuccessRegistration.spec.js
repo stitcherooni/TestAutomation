@@ -117,8 +117,8 @@ describe("Smoke test. Verify it", async function () {
     );
     
     await driver.findElement(By.xpath(helper.starterPackage)).click();
-    await driver.wait(until.elementLocated(By.css(".sc-eqUAAy")), 20000);
-    await driver.findElement(By.css(".sc-eqUAAy")).click();
+    await driver.wait(until.elementLocated(By.css(helper.btnContinue)), 20000);
+    await driver.findElement(By.css(helper.btnContinue)).click();
   });
 
   it(" is able display the final page", async function () {
