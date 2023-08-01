@@ -17,10 +17,10 @@ describe("Smoke test. Verify it", async function () {
     await driver.get(process.env.URL);
   });
 
-  // after(async function () {
-  //   await clearLocalStorage(driver);
-  //   await driver.quit();
-  // });
+  after(async function () {
+    await clearLocalStorage(driver);
+    await driver.quit();
+  });
 
   it(" is able to choose location ", async function () {
     await driver.manage().setTimeouts({ implicit: 1000 });
