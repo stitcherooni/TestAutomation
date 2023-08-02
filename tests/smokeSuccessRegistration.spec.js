@@ -43,7 +43,9 @@ describe("Smoke test. Verify it", async function () {
     await driver.findElement(By.id(helper.inputPTAName)).click();
     await driver.findElement(By.id(helper.inputPTAName)).sendKeys("PTA Name");
     await driver.findElement(By.id(helper.inputSchoolName)).click();
-    await driver.findElement(By.id(helper.inputSchoolName)).sendKeys("School  Name");
+    await driver
+      .findElement(By.id(helper.inputSchoolName))
+      .sendKeys("School  Name");
     await driver.findElement(By.id(helper.inputAddress1)).click();
     await driver.findElement(By.id(helper.inputAddress1)).sendKeys("Address1");
     await driver.findElement(By.id(helper.inputAddress2)).click();
@@ -59,53 +61,53 @@ describe("Smoke test. Verify it", async function () {
   });
 
   it(" is able to choose color ", async function () {
-    await driver
-      .findElement(By.css(helper.color9))
-      .click();
+    await driver.findElement(By.css(helper.color9)).click();
     await driver.findElement(By.css(helper.btnContinue)).click();
   });
 
   it(" is able to choose URL of the Organisation  ", async function () {
-  
-      await driver.findElement(By.id(helper.inputURL)).click();
-      await driver.manage().setTimeouts({ implicit: 3000 });
-      await driver
-        .findElement(By.id(helper.inputURL))
-        .sendKeys(
-          "autotestsurl" + (Math.floor(Math.random() * 900000) + 100000)
-        );
-     await driver.wait(
+    await driver.findElement(By.id(helper.inputURL)).click();
+    await driver.manage().setTimeouts({ implicit: 3000 });
+    await driver
+      .findElement(By.id(helper.inputURL))
+      .sendKeys("autotestsurl" + (Math.floor(Math.random() * 900000) + 100000));
+    await driver.wait(
       until.elementLocated(By.xpath(helper.notificationURL)),
       20000
     );
-    await driver
-      .findElement(By.css(helper.btnContinue))
-      .click();
+    await driver.findElement(By.css(helper.btnContinue)).click();
   });
 
   it(" is able to fill in Account details web form  ", async function () {
     await driver.findElement(By.id(helper.inputFirstName)).click();
-    await driver.findElement(By.id(helper.inputFirstName)).sendKeys("First Name");
+    await driver
+      .findElement(By.id(helper.inputFirstName))
+      .sendKeys("First Name");
     await driver.findElement(By.id(helper.inputSecondName)).click();
-    await driver.findElement(By.id(helper.inputSecondName)).sendKeys("Second Name");
+    await driver
+      .findElement(By.id(helper.inputSecondName))
+      .sendKeys("Second Name");
 
     const element = await driver.findElement(By.id(helper.dropdnRole));
 
     await driver.findElement(By.id(helper.dropdnRole)).click();
 
     await driver.manage().setTimeouts({ implicit: 500 });
-    await driver
-      .findElement(
-        By.css(helper.roleChair))
-      .click();
+    await driver.findElement(By.css(helper.roleChair)).click();
     await driver.findElement(By.id(helper.inputEmail)).click();
-    await driver.findElement(By.id(helper.inputEmail)).sendKeys("ajustlike@gmail.com");
+    await driver
+      .findElement(By.id(helper.inputEmail))
+      .sendKeys("ajustlike@gmail.com");
     await scrollToBottom(driver);
     await driver.findElement(By.id(helper.inputPassword)).click();
 
-    await driver.findElement(By.id(helper.inputPassword)).sendKeys("!Asd123456");
+    await driver
+      .findElement(By.id(helper.inputPassword))
+      .sendKeys("!Asd123456");
     await driver.findElement(By.id(helper.inputRepeatPassword)).click();
-    await driver.findElement(By.id(helper.inputRepeatPassword)).sendKeys("!Asd123456");
+    await driver
+      .findElement(By.id(helper.inputRepeatPassword))
+      .sendKeys("!Asd123456");
     await driver.findElement(By.css(helper.btnContinue)).click();
   });
 
@@ -115,7 +117,7 @@ describe("Smoke test. Verify it", async function () {
       until.elementLocated(By.xpath(helper.starterPackage)),
       20000
     );
-    
+
     await driver.findElement(By.xpath(helper.starterPackage)).click();
     await driver.wait(until.elementLocated(By.css(helper.btnContinue)), 20000);
     await driver.findElement(By.css(helper.btnContinue)).click();

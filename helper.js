@@ -35,6 +35,19 @@ async function generateRandomUrl() {
   return randomText;
 }
 
+async function parseData() {
+  const storData = await driver.executeScript(
+      `return JSON.parse(localStorage.getItem("persist:pta-events"))`
+    );
+    const parsedData = JSON.parse(storData.signup);
+    return parsedData 
+  
+  // let storData = await driver.executeScript(
+  //   `return JSON.parse(localStorage.getItem("persist:pta-events"))`
+  // );
+  //  return JSON.parse(storData.signup).then(function(txt){console.log(txt.elem)})
+}
+
 let firstPageContinueButton =
   "#root > main > div > div > div.sc-cPiKLX.fqYvIo > div > a";
 let locationBtnEnglandWales = "#countries > div:nth-child(1) > div";
@@ -160,6 +173,7 @@ module.exports = {
   clickOnClickableElementByCss,
   generateRandomUrl,
   localStorageAccount,
+  parseData,
 
   firstPageContinueButton,
   locationBtnEnglandWales,
