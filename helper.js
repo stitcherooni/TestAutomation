@@ -42,25 +42,25 @@ async function parseData() {
     const parsedData = JSON.parse(storData.signup);
     return parsedData 
   
-  // let storData = await driver.executeScript(
-  //   `return JSON.parse(localStorage.getItem("persist:pta-events"))`
-  // );
-  //  return JSON.parse(storData.signup).then(function(txt){console.log(txt.elem)})
 }
 
+//the first page
 let firstPageContinueButton =
   "#root > main > div > div > div.sc-cPiKLX.fqYvIo > div > a";
+
+//location page
 let locationBtnEnglandWales = "#countries > div:nth-child(1) > div";
-let locationBtnScotland = '[data-name="Scotland"]';
-let locationBtnNorternIreland = '[data-name="England & Wales"]';
-let locationBtnUSA = '[data-name="England & Wales"]';
-let locationBtnNewZealand = '[data-name="England & Wales"]';
-let locationBtnAustralia = '[data-name="England & Wales"]';
-let locationBtnCanada = '[data-name="England & Wales"]';
-let locationBtnIreland = '[data-name="England & Wales"]';
+let locationBtnScotland = '.sc-fjvvzt:nth-child(2) > .image-wrapper';
+let locationBtnNorternIreland = '.sc-fjvvzt:nth-child(3) > .image-wrapper';
+let locationBtnUSA = '.sc-fjvvzt:nth-child(4) > .image-wrapper';;
+let locationBtnNewZealand = '.sc-fjvvzt:nth-child(5) > .image-wrapper';;
+let locationBtnAustralia = '.sc-fjvvzt:nth-child(6) > .image-wrapper';;
+let locationBtnCanada = '.sc-fjvvzt:nth-child(7) > .image-wrapper';;
+let locationBtnIreland = '.sc-fjvvzt:nth-child(8) > .image-wrapper';
 let btnContinueLocation =
   "#root > main > div > div > div.sc-cPiKLX.fqYvIo > div:nth-child(2) > button";
 
+//organisation web form
 let inputPTAName = "ptaName";
 let inputSchoolName = "schoolName";
 let inputAddress1 = "address1";
@@ -70,6 +70,7 @@ let inputCounty = "county";
 let inputPostCode = "postCode";
 let btnContinue = ".sc-eqUAAy";
 
+//color page
 let color1 = ".itoEEl > .PrivateSwitchBase-input"; //Peachy Pinky
 let color2 = ".dEAwDV > .PrivateSwitchBase-input";
 let color3 = ".clOXBF > .PrivateSwitchBase-input";
@@ -83,9 +84,11 @@ let color10 = ".cWSplh > .PrivateSwitchBase-input";
 let color11 = ".lpoAjF > .PrivateSwitchBase-input";
 let color12 = ".cvZEVi > .PrivateSwitchBase-input";
 
+//url page
 let inputURL = "ptaUrl";
 let notificationURL = '//*[@id="ptaUrl-helper-text"]/span';
 
+//account web form
 let inputFirstName = "firstName";
 let inputSecondName = "secondName";
 let dropdnRole = "ptaRole";
@@ -95,12 +98,16 @@ let inputEmail = "ptaEmail";
 let inputPassword = "ptaPassword";
 let inputRepeatPassword = "ptaRepeatPassword";
 
+//package page
 let starterPackage =
   '//*[@id="root"]/main/div/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/button';
 let proPackage =
   "#root > main > div > div > div.sc-cPiKLX.fqYvIo > div:nth-child(2) > div.sc-kdBSHD.iOGLpV > div:nth-child(1) > div > div.sc-hCPjZK.czJzWZ > button";
 
+//final page
 let messageSuccess = "#root > main > div > div > div > p.text";
+
+
 
 let localStorageBranding = {
   signup:
@@ -177,6 +184,14 @@ module.exports = {
 
   firstPageContinueButton,
   locationBtnEnglandWales,
+  locationBtnScotland,
+  locationBtnNorternIreland,
+  locationBtnUSA,
+  locationBtnNewZealand,
+  locationBtnAustralia,
+  locationBtnCanada,
+  locationBtnIreland,
+  
   btnContinue,
   starterPackage,
   inputPTAName,
