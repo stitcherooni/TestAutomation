@@ -49,16 +49,25 @@ let firstPageContinueButton =
   "#root > main > div > div > div.sc-cPiKLX.fqYvIo > div > a";
 
 //location page
-let locationBtnEnglandWales = "#countries > div:nth-child(1) > div";
-let locationBtnScotland = '.sc-fjvvzt:nth-child(2) > .image-wrapper';
-let locationBtnNorternIreland = '.sc-fjvvzt:nth-child(3) > .image-wrapper';
-let locationBtnUSA = '.sc-fjvvzt:nth-child(4) > .image-wrapper';;
-let locationBtnNewZealand = '.sc-fjvvzt:nth-child(5) > .image-wrapper';;
-let locationBtnAustralia = '.sc-fjvvzt:nth-child(6) > .image-wrapper';;
-let locationBtnCanada = '.sc-fjvvzt:nth-child(7) > .image-wrapper';;
-let locationBtnIreland = '.sc-fjvvzt:nth-child(8) > .image-wrapper';
-let btnContinueLocation =
-  "#root > main > div > div > div.sc-cPiKLX.fqYvIo > div:nth-child(2) > button";
+let locationBtnEnglandWales ='[data-name="England & Wales"]';
+
+let locationBtnScotland = '[data-name="Scotland"]';
+
+let locationBtnNorternIreland = '[data-name="Northern Ireland"]';
+
+let locationBtnUSA = '[data-name="USA"]';
+
+let locationBtnNewZealand = '[data-name="New Zealand"]';
+
+let locationBtnAustralia = '[data-name="Australia"]';
+
+let locationBtnCanada = '[data-name="Canada"]';
+
+let locationBtnIreland = '[data-name="Ireland"]';
+
+let btnContinueLocation ="#root > main > div > div > div.sc-cPiKLX.fqYvIo > div:nth-child(2) > button";
+
+  
 
 //organisation web form
 let inputPTAName = "ptaName";
@@ -71,18 +80,18 @@ let inputPostCode = "postCode";
 let btnContinue = ".sc-eqUAAy";
 
 //color page
-let color1 = ".itoEEl > .PrivateSwitchBase-input"; //Peachy Pinky
-let color2 = ".dEAwDV > .PrivateSwitchBase-input";
-let color3 = ".clOXBF > .PrivateSwitchBase-input";
-let color4 = ".eDOvnS > .PrivateSwitchBase-input";
-let color5 = ".hTeWZK > .PrivateSwitchBase-input";
-let color6 = ".gLxpPB > .PrivateSwitchBase-input";
-let color7 = ".ugRht > .PrivateSwitchBase-input";
-let color8 = ".lkTBnJ > .PrivateSwitchBase-input";
-let color9 = ".hrGTBD > .PrivateSwitchBase-input";
-let color10 = ".cWSplh > .PrivateSwitchBase-input";
-let color11 = ".lpoAjF > .PrivateSwitchBase-input";
-let color12 = ".cvZEVi > .PrivateSwitchBase-input";
+let color1 = '[background="#FF7B5E"]'; //Peachy Pinky
+let color2 =  '[background="#F30000"]';//red
+let color3 = '[background="#9C27B0"]';//Dark Orchid
+let color4 = '[background="#673AB7"]';//purple
+let color5 = '[background="#3F51B5"]';//blue
+let color6 = '[background="#2196F3"]';//light blue
+let color7 = '[background="#03A9F4"]';//sky blue
+let color8 = '[background="#00BCD4"]';//iris blue
+let color9 = '[background="#009688"]';//dark cyan
+let color10 = '[background="#4CAF50"]';//light green
+let color11 = '[background="#FFC107"]';//yellow
+let color12 = '[background="#4F4F4F"]';//Matterhorn
 
 //url page
 let inputURL = "ptaUrl";
@@ -191,7 +200,7 @@ module.exports = {
   locationBtnAustralia,
   locationBtnCanada,
   locationBtnIreland,
-  
+
   btnContinue,
   starterPackage,
   inputPTAName,
@@ -228,5 +237,5 @@ module.exports = {
   localStorageOrganisationDetails,
   localStorageURL,
   localStoragePackageWithPassword,
-  localStoragePackageWithPackage,
+  localStoragePackageWithPackage
 };

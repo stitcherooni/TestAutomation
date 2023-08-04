@@ -9,6 +9,11 @@ describe("Verify Button Countinue becames enabled after", function () {
   beforeEach(async function () {
     driver = await new webdriver.Builder().forBrowser("chrome").build();
     await driver.get(process.env.URL);
+    let continueButton = await driver.findElement(
+      By.css(helper.firstPageContinueButton)
+    );
+
+    await continueButton.click();
   });
 
   afterEach(async function () {
@@ -17,14 +22,6 @@ describe("Verify Button Countinue becames enabled after", function () {
   });
 
   it(" click on 'England and Wales' button", async function () {
-    await driver
-      .manage()
-      .setTimeouts({ implicit: Number(process.env.STANDARTDELAY) });
-    let continueButton = await driver.findElement(
-      By.css(helper.firstPageContinueButton)
-    );
-
-    await continueButton.click();
 
     const button = await driver.findElement(By.css(helper.btnContinue));
 
@@ -47,14 +44,6 @@ describe("Verify Button Countinue becames enabled after", function () {
   });
 
   it(" click on 'Scotland' button", async function () {
-    await driver
-      .manage()
-      .setTimeouts({ implicit: Number(process.env.STANDARTDELAY) });
-    let continueButton = await driver.findElement(
-      By.css(helper.firstPageContinueButton)
-    );
-
-    await continueButton.click();
 
     const button = await driver.findElement(By.css(helper.btnContinue));
 
@@ -75,14 +64,6 @@ describe("Verify Button Countinue becames enabled after", function () {
   });
 
   it(" click on 'Northern Ireland' button", async function () {
-    await driver
-      .manage()
-      .setTimeouts({ implicit: Number(process.env.STANDARTDELAY) });
-    let continueButton = await driver.findElement(
-      By.css(helper.firstPageContinueButton)
-    );
-
-    await continueButton.click();
 
     const button = await driver.findElement(By.css(helper.btnContinue));
 
@@ -105,13 +86,8 @@ describe("Verify Button Countinue becames enabled after", function () {
   });
 
   it(" click on 'USA' button", async function () {
-    let continueButton = await driver.findElement(
-      By.css(helper.firstPageContinueButton)
-    );
 
-    await continueButton.click();
-
-    const button = await driver.findElement(By.css(helper.btnContinue));
+     const button = await driver.findElement(By.css(helper.btnContinue));
 
     assert(
       (await button.isEnabled()) === false,
@@ -130,14 +106,6 @@ describe("Verify Button Countinue becames enabled after", function () {
   });
 
   it(" click on 'New Zealand' button", async function () {
-    await driver
-      .manage()
-      .setTimeouts({ implicit: Number(process.env.STANDARTDELAY) });
-    let continueButton = await driver.findElement(
-      By.css(helper.firstPageContinueButton)
-    );
-
-    await continueButton.click();
 
     const button = await driver.findElement(By.css(helper.btnContinue));
 
@@ -160,14 +128,6 @@ describe("Verify Button Countinue becames enabled after", function () {
   });
 
   it(" click on 'Australia' button", async function () {
-    await driver
-      .manage()
-      .setTimeouts({ implicit: Number(process.env.STANDARTDELAY) });
-    let continueButton = await driver.findElement(
-      By.css(helper.firstPageContinueButton)
-    );
-
-    await continueButton.click();
 
     const button = await driver.findElement(By.css(helper.btnContinue));
 
@@ -190,14 +150,6 @@ describe("Verify Button Countinue becames enabled after", function () {
   });
 
   it(" click on 'Canada' button", async function () {
-    await driver
-      .manage()
-      .setTimeouts({ implicit: Number(process.env.STANDARTDELAY) });
-    let continueButton = await driver.findElement(
-      By.css(helper.firstPageContinueButton)
-    );
-
-    await continueButton.click();
 
     const button = await driver.findElement(By.css(helper.btnContinue));
 
@@ -218,14 +170,6 @@ describe("Verify Button Countinue becames enabled after", function () {
   });
 
   it(" click on 'Ireland' button", async function () {
-    await driver
-      .manage()
-      .setTimeouts({ implicit: Number(process.env.STANDARTDELAY) });
-    let continueButton = await driver.findElement(
-      By.css(helper.firstPageContinueButton)
-    );
-
-    await continueButton.click();
 
     const button = await driver.findElement(By.css(helper.btnContinue));
 
