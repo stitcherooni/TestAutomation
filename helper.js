@@ -101,8 +101,14 @@ let notificationURL = '//*[@id="ptaUrl-helper-text"]/span';
 let inputFirstName = "firstName";
 let inputSecondName = "secondName";
 let dropdnRole = "ptaRole";
-let roleChair =
-  "#menu-role > div.MuiPaper-root.MuiMenu-paper.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-19k1qda > ul > li:nth-child(1)";
+let roleListBox = "[role='listbox']"
+let roleChair ="[data-value='Chair']"
+let roleViceChair ="[data-value='Vice Chair']"
+let roleTreasurer ="[data-value='Treasurer']"
+let roleSecretary="[data-value='Secretary']"
+let roleHeadteacher ="[data-value='Headteacher']"
+let roleSchoolAdmin="[data-value='School Admin']"
+let roleOther ="[data-value='Other']"
 let inputEmail = "ptaEmail";
 let inputPassword = "ptaPassword";
 let inputRepeatPassword = "ptaRepeatPassword";
@@ -226,8 +232,17 @@ module.exports = {
   notificationURL,
   inputFirstName,
   inputSecondName,
+
   dropdnRole,
+  roleListBox,
   roleChair,
+  roleViceChair,
+  roleTreasurer,
+  roleHeadteacher,
+  roleOther,
+  roleSchoolAdmin,
+  roleSchoolAdmin,
+  roleSecretary,
   inputEmail,
   inputPassword,
   inputRepeatPassword,
