@@ -4,7 +4,7 @@ const helper = require("../helper.js");
 const {
   clearLocalStorage,
   scrollToBottom,
-  generateRandomUrl,
+
 } = require("../helper.js");
 var webdriver = require("selenium-webdriver"),
   By = webdriver.By,

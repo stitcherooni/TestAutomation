@@ -71,12 +71,19 @@ let btnContinueLocation ="#root > main > div > div > div.sc-cPiKLX.fqYvIo > div:
 
 //organisation web form
 let inputPTAName = "ptaName";
+let notificationPTANAme = "ptaName-helper-text";
 let inputSchoolName = "schoolName";
+let notificationSchoolNAme = "schoolName-helper-text";
 let inputAddress1 = "address1";
+let notificationAddress1 = "address1-helper-text";
 let inputAddress2 = "address2";
+let notificationAddress2 = "address2-helper-text";
 let inputTown = "town";
+let notificationTown = "town-helper-text";
 let inputCounty = "county";
+let notificationCounty = "county-helper-text";
 let inputPostCode = "postCode";
+let notificationPostCode = "postCode-helper-text";
 let btnContinue = ".sc-eqUAAy";
 
 //color page
@@ -208,7 +215,8 @@ module.exports = {
   locationBtnIreland,
 
   btnContinue,
-  starterPackage,
+
+  
   inputPTAName,
   inputSchoolName,
   inputAddress1,
@@ -216,6 +224,14 @@ module.exports = {
   inputTown,
   inputCounty,
   inputPostCode,
+  notificationPTANAme,
+  notificationSchoolNAme,
+  notificationAddress1,
+  notificationAddress2,
+  notificationTown,
+  notificationCounty,
+  notificationPostCode,
+
   color1,
   color2,
   color3,
@@ -248,6 +264,7 @@ module.exports = {
   inputRepeatPassword,
   messageSuccess,
   proPackage,
+  starterPackage,
   localStorageBranding,
   localStorageOrganisationDetails,
   localStorageURL,
