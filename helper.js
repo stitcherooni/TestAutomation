@@ -42,25 +42,34 @@ async function parseData() {
     const parsedData = JSON.parse(storData.signup);
     return parsedData 
   
-  // let storData = await driver.executeScript(
-  //   `return JSON.parse(localStorage.getItem("persist:pta-events"))`
-  // );
-  //  return JSON.parse(storData.signup).then(function(txt){console.log(txt.elem)})
 }
 
+//the first page
 let firstPageContinueButton =
   "#root > main > div > div > div.sc-cPiKLX.fqYvIo > div > a";
-let locationBtnEnglandWales = "#countries > div:nth-child(1) > div";
-let locationBtnScotland = '[data-name="Scotland"]';
-let locationBtnNorternIreland = '[data-name="England & Wales"]';
-let locationBtnUSA = '[data-name="England & Wales"]';
-let locationBtnNewZealand = '[data-name="England & Wales"]';
-let locationBtnAustralia = '[data-name="England & Wales"]';
-let locationBtnCanada = '[data-name="England & Wales"]';
-let locationBtnIreland = '[data-name="England & Wales"]';
-let btnContinueLocation =
-  "#root > main > div > div > div.sc-cPiKLX.fqYvIo > div:nth-child(2) > button";
 
+//location page
+let locationBtnEnglandWales ='[data-name="England & Wales"]';
+
+let locationBtnScotland = '[data-name="Scotland"]';
+
+let locationBtnNorternIreland = '[data-name="Northern Ireland"]';
+
+let locationBtnUSA = '[data-name="USA"]';
+
+let locationBtnNewZealand = '[data-name="New Zealand"]';
+
+let locationBtnAustralia = '[data-name="Australia"]';
+
+let locationBtnCanada = '[data-name="Canada"]';
+
+let locationBtnIreland = '[data-name="Ireland"]';
+
+let btnContinueLocation ="#root > main > div > div > div.sc-cPiKLX.fqYvIo > div:nth-child(2) > button";
+
+  
+
+//organisation web form
 let inputPTAName = "ptaName";
 let inputSchoolName = "schoolName";
 let inputAddress1 = "address1";
@@ -70,37 +79,50 @@ let inputCounty = "county";
 let inputPostCode = "postCode";
 let btnContinue = ".sc-eqUAAy";
 
-let color1 = ".itoEEl > .PrivateSwitchBase-input"; //Peachy Pinky
-let color2 = ".dEAwDV > .PrivateSwitchBase-input";
-let color3 = ".clOXBF > .PrivateSwitchBase-input";
-let color4 = ".eDOvnS > .PrivateSwitchBase-input";
-let color5 = ".hTeWZK > .PrivateSwitchBase-input";
-let color6 = ".gLxpPB > .PrivateSwitchBase-input";
-let color7 = ".ugRht > .PrivateSwitchBase-input";
-let color8 = ".lkTBnJ > .PrivateSwitchBase-input";
-let color9 = ".hrGTBD > .PrivateSwitchBase-input";
-let color10 = ".cWSplh > .PrivateSwitchBase-input";
-let color11 = ".lpoAjF > .PrivateSwitchBase-input";
-let color12 = ".cvZEVi > .PrivateSwitchBase-input";
+//color page
+let color1 = '[background="#FF7B5E"]'; //Peachy Pinky
+let color2 =  '[background="#F30000"]';//red
+let color3 = '[background="#9C27B0"]';//Dark Orchid
+let color4 = '[background="#673AB7"]';//purple
+let color5 = '[background="#3F51B5"]';//blue
+let color6 = '[background="#2196F3"]';//light blue
+let color7 = '[background="#03A9F4"]';//sky blue
+let color8 = '[background="#00BCD4"]';//iris blue
+let color9 = '[background="#009688"]';//dark cyan
+let color10 = '[background="#4CAF50"]';//light green
+let color11 = '[background="#FFC107"]';//yellow
+let color12 = '[background="#4F4F4F"]';//Matterhorn
 
+//url page
 let inputURL = "ptaUrl";
 let notificationURL = '//*[@id="ptaUrl-helper-text"]/span';
 
+//account web form
 let inputFirstName = "firstName";
 let inputSecondName = "secondName";
 let dropdnRole = "ptaRole";
-let roleChair =
-  "#menu-role > div.MuiPaper-root.MuiMenu-paper.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-19k1qda > ul > li:nth-child(1)";
+let roleListBox = "[role='listbox']"
+let roleChair ="[data-value='Chair']"
+let roleViceChair ="[data-value='Vice Chair']"
+let roleTreasurer ="[data-value='Treasurer']"
+let roleSecretary="[data-value='Secretary']"
+let roleHeadteacher ="[data-value='Headteacher']"
+let roleSchoolAdmin="[data-value='School Admin']"
+let roleOther ="[data-value='Other']"
 let inputEmail = "ptaEmail";
 let inputPassword = "ptaPassword";
 let inputRepeatPassword = "ptaRepeatPassword";
 
+//package page
 let starterPackage =
   '//*[@id="root"]/main/div/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/button';
 let proPackage =
   "#root > main > div > div > div.sc-cPiKLX.fqYvIo > div:nth-child(2) > div.sc-kdBSHD.iOGLpV > div:nth-child(1) > div > div.sc-hCPjZK.czJzWZ > button";
 
+//final page
 let messageSuccess = "#root > main > div > div > div > p.text";
+
+
 
 let localStorageBranding = {
   signup:
@@ -177,6 +199,14 @@ module.exports = {
 
   firstPageContinueButton,
   locationBtnEnglandWales,
+  locationBtnScotland,
+  locationBtnNorternIreland,
+  locationBtnUSA,
+  locationBtnNewZealand,
+  locationBtnAustralia,
+  locationBtnCanada,
+  locationBtnIreland,
+
   btnContinue,
   starterPackage,
   inputPTAName,
@@ -202,8 +232,17 @@ module.exports = {
   notificationURL,
   inputFirstName,
   inputSecondName,
+
   dropdnRole,
+  roleListBox,
   roleChair,
+  roleViceChair,
+  roleTreasurer,
+  roleHeadteacher,
+  roleOther,
+  roleSchoolAdmin,
+  roleSchoolAdmin,
+  roleSecretary,
   inputEmail,
   inputPassword,
   inputRepeatPassword,
@@ -213,5 +252,5 @@ module.exports = {
   localStorageOrganisationDetails,
   localStorageURL,
   localStoragePackageWithPassword,
-  localStoragePackageWithPackage,
+  localStoragePackageWithPackage
 };

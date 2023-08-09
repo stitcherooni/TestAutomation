@@ -23,7 +23,7 @@ var webdriver = require('selenium-webdriver'),
  
     let title = await driver.getTitle();
 
-    assert.equal("PTA Events Onboarding", title);
+    assert.equal("PTA Events Onboarding",title);
 
   });
 

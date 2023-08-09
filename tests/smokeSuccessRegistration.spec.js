@@ -41,22 +41,22 @@ describe("Smoke test. Verify it", async function () {
 
   it(" is able to fill in Organisation details web form ", async function () {
     await driver.findElement(By.id(helper.inputPTAName)).click();
-    await driver.findElement(By.id(helper.inputPTAName)).sendKeys("PTA Name");
+    await driver.findElement(By.id(helper.inputPTAName)).sendKeys(process.env.PTANAME);
     await driver.findElement(By.id(helper.inputSchoolName)).click();
     await driver
       .findElement(By.id(helper.inputSchoolName))
-      .sendKeys("School  Name");
+      .sendKeys(process.env.ORGANISATIONNAME);
     await driver.findElement(By.id(helper.inputAddress1)).click();
-    await driver.findElement(By.id(helper.inputAddress1)).sendKeys("Address1");
+    await driver.findElement(By.id(helper.inputAddress1)).sendKeys(process.env.ADDRESS1);
     await driver.findElement(By.id(helper.inputAddress2)).click();
-    await driver.findElement(By.id(helper.inputAddress2)).sendKeys("Address2");
+    await driver.findElement(By.id(helper.inputAddress2)).sendKeys(process.env.ADDRESS1);
     await scrollToBottom(driver);
     await driver.findElement(By.id(helper.inputTown)).click();
-    await driver.findElement(By.id(helper.inputTown)).sendKeys("Town");
+    await driver.findElement(By.id(helper.inputTown)).sendKeys(process.env.ADDRESS2);
     await driver.findElement(By.id(helper.inputCounty)).click();
-    await driver.findElement(By.id(helper.inputCounty)).sendKeys("Country");
+    await driver.findElement(By.id(helper.inputCounty)).sendKeys(process.env.COUNTY);
     await driver.findElement(By.id(helper.inputPostCode)).click();
-    await driver.findElement(By.id(helper.inputPostCode)).sendKeys("Postcode");
+    await driver.findElement(By.id(helper.inputPostCode)).sendKeys(process.env.POSTCODE);
     await driver.findElement(By.css(helper.btnContinue)).click();
   });
 
@@ -82,11 +82,11 @@ describe("Smoke test. Verify it", async function () {
     await driver.findElement(By.id(helper.inputFirstName)).click();
     await driver
       .findElement(By.id(helper.inputFirstName))
-      .sendKeys("First Name");
+      .sendKeys(process.env.FIRSTNAME);
     await driver.findElement(By.id(helper.inputSecondName)).click();
     await driver
       .findElement(By.id(helper.inputSecondName))
-      .sendKeys("Second Name");
+      .sendKeys(process.env.SECONDNAME);
 
     const element = await driver.findElement(By.id(helper.dropdnRole));
 
@@ -97,17 +97,17 @@ describe("Smoke test. Verify it", async function () {
     await driver.findElement(By.id(helper.inputEmail)).click();
     await driver
       .findElement(By.id(helper.inputEmail))
-      .sendKeys("ajustlike@gmail.com");
+      .sendKeys(process.env.EMAIL);
     await scrollToBottom(driver);
     await driver.findElement(By.id(helper.inputPassword)).click();
 
     await driver
       .findElement(By.id(helper.inputPassword))
-      .sendKeys("!Asd123456");
+      .sendKeys(process.env.PASSWORD);
     await driver.findElement(By.id(helper.inputRepeatPassword)).click();
     await driver
       .findElement(By.id(helper.inputRepeatPassword))
-      .sendKeys("!Asd123456");
+      .sendKeys(process.env.PASSWORD);
     await driver.findElement(By.css(helper.btnContinue)).click();
   });
 
