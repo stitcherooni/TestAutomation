@@ -85,6 +85,7 @@ let notificationCounty = "county-helper-text";
 let inputPostCode = "postCode";
 let notificationPostCode = "postCode-helper-text";
 let btnContinue = ".sc-eqUAAy";
+let notificationValidation = `can have letters, numbers, & £ £ $ " = ( ) @ # : ; . , \\ / ? + ! * ' space carriage return, line break and high ascii characters (ÀÁÂÃÄÅÆÇÈÉÊËÌÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ)`
 
 //color page
 let color1 = '[background="#FF7B5E"]'; //Peachy Pinky
@@ -231,7 +232,7 @@ module.exports = {
   notificationTown,
   notificationCounty,
   notificationPostCode,
-
+  notificationValidation,
   color1,
   color2,
   color3,
