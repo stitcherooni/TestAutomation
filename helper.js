@@ -85,7 +85,14 @@ let notificationCounty = "county-helper-text";
 let inputPostCode = "postCode";
 let notificationPostCode = "postCode-helper-text";
 let btnContinue = ".sc-eqUAAy";
-let notificationValidation = `can have letters, numbers, & £ £ $ " = ( ) @ # : ; . , \\ / ? + ! * ' space carriage return, line break and high ascii characters (ÀÁÂÃÄÅÆÇÈÉÊËÌÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ)`
+let notificationValidation = `can have letters, numbers, & £ £ $ " = ( ) @ # : ; . , \\ / ? + ! * ' space carriage return, line break and high ascii characters (ÀÁÂÃÄÅÆÇÈÉÊËÌÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ)`;
+let notificationPTA = `PTA Name can have letters, numbers, & ( ) ' - , . space and high ascii characters (ÀÁÂÃÄÅÆÇÈÉÊËÌÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ)`;
+let notificationMax = ' must be at most 100 characters';
+let notificationMax50 = ' must be at most 50 characters';
+let notificationMaxPTAName = ' must be at most 250 characters';
+let notificationMatchPWD = "Passwords dont match";
+let notificationMatchEmail = "Please check your email"
+let notificationVerPWD = "Password must be a minimum of 8 to 64 characters. It requires 3 out of 4 of lowercase, uppercase, numbers, or symbols."
 
 //color page
 let color1 = '[background="#FF7B5E"]'; //Peachy Pinky
@@ -107,8 +114,11 @@ let notificationURL = '//*[@id="ptaUrl-helper-text"]/span';
 
 //account web form
 let inputFirstName = "firstName";
+let notificationFN = "firstName-helper-text";
 let inputSecondName = "secondName";
+let notificationSN = "secondName-helper-text";
 let dropdnRole = "ptaRole";
+// let notificationRole = ""
 let roleListBox = "[role='listbox']"
 let roleChair ="[data-value='Chair']"
 let roleViceChair ="[data-value='Vice Chair']"
@@ -118,8 +128,11 @@ let roleHeadteacher ="[data-value='Headteacher']"
 let roleSchoolAdmin="[data-value='School Admin']"
 let roleOther ="[data-value='Other']"
 let inputEmail = "ptaEmail";
+let notificationEmail = "ptaEmail-helper-text"
 let inputPassword = "ptaPassword";
+let notificationPWD = "ptaPassword-helper-text"
 let inputRepeatPassword = "ptaRepeatPassword";
+let notificationRptPWD = "ptaRepeatPassword-helper-text"
 
 //package page
 let starterPackage =
@@ -233,6 +246,18 @@ module.exports = {
   notificationCounty,
   notificationPostCode,
   notificationValidation,
+  notificationPTA,
+  notificationMax,
+  notificationMax50 ,
+  notificationMaxPTAName,
+  notificationFN,
+  notificationSN,
+  notificationEmail,
+  notificationPWD,
+  notificationRptPWD,
+  notificationMatchPWD,
+  notificationMatchEmail,
+  notificationVerPWD,
   color1,
   color2,
   color3,
